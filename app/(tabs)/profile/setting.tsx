@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Profile() {
+export default function Setting() {
   return (
     <View>
-      <Text>Profile Page</Text>
+      <Text>Profile Setting Screen</Text>
     </View>
   )
 }
