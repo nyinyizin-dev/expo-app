@@ -12,6 +12,7 @@ export default function Index() {
     >
       <Text style={{fontSize: 33}}>Home Screen</Text>
       <Link href={'/login'}>Go to Login</Link>
+      <Link href={'/profile'}>Go to Profile</Link>
     </View>
   );
 }
