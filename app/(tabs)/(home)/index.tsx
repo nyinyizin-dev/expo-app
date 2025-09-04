@@ -8,6 +8,7 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <Link href="/settings/David">Go to Share Setting</Link>
       <Link href="/detail?id=normal-5">Go to Home detail</Link>
+      <Link href="/event">Go to Home Event</Link>
       <Button title="Go to Detail" onPress={() => router.navigate({pathname: '/detail', params: {id: 'Button-7'}})} />
     </View>
   );
