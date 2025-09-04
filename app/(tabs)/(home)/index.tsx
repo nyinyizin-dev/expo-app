@@ -6,6 +6,8 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
+      <Link href="/20">Go to ProductId Screen</Link>
+      <Link href="/settings/David">Go to Settings User</Link>
       <Link href="/detail?id=5">Go to Home detail</Link>
       <Button title="Go to Detail" onPress={() => router.navigate({pathname: '/detail', params: {id: 7}})} />
     </View>
