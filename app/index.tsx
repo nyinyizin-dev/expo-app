@@ -6,6 +6,7 @@ export default function HomeScreen() {
   return (
     <View>
       <Text>Home Page</Text>
+      <Link href="/setting">Go to Setting</Link>
       <Link href="/about">Go to About</Link>
     </View>
   );
