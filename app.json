@@ -13,6 +13,9 @@
       "bundleIdentifier": "com.nyinyizin.expoapp",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
+      },
+        "config": {
+        "usesNonExemptEncryption": false
       }
     },
     "android": {
@@ -53,9 +56,12 @@
       [
         "expo-asset",
         {
-          "assets": ["./assets/images/man.png"]
+          "assets": [
+            "./assets/images/man.png"
+          ]
         }
-      ]
+      ],
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true
