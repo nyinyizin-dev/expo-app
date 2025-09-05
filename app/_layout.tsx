@@ -14,6 +14,8 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+    NotoSerifJP: require("../assets/fonts/NotoSerifJP-Regular.ttf"),
+    "Oswald-Bold": require("../assets/fonts/Oswald-Bold.ttf")
   });
 
   if (!loaded) {
