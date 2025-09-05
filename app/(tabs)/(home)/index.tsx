@@ -1,8 +1,11 @@
-import { View, Text, TextInput } from "react-native";
+import { View, Text, TextInput,Button } from "react-native";
 import React, { useState } from "react";
+import { useCounter } from "@/providers/countContext";
 
 export default function HomeScreen() {
   const [text, setText] = useState("");
+  
+ const {count, increase, decrease} = useCounter();
 
   return (
     <View>
@@ -13,6 +16,9 @@ export default function HomeScreen() {
         onChangeText={(text) => setText(text)}
         defaultValue={text}
       />
+      <Text style={{ fontSize: 32, marginTop: 10}}>Count : {count}</Text>
+      <Button title="Increase + " onPress={increase} />
+      <Button title="Decrease + " onPress={decrease} />
     </View>
   );
 }

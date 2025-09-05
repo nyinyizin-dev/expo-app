@@ -14,6 +14,7 @@ import {
 } from "@expo-google-fonts/inter";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
+import { CountProvider } from "@/providers/countContext";
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -32,10 +33,13 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
+      <CountProvider>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="+not-found" />
+        </Stack>
+      </CountProvider>
+
       <StatusBar style="auto" />
     </ThemeProvider>
   );
