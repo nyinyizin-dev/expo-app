@@ -24,7 +24,7 @@ export default function Cart() {
       <Image source={{uri:'https://i.pravatar.cc/400?img=37'}} 
       style={{width: 150, height: 200, resizeMode: 'contain',backgroundColor: "teal"}} />
       <Image source={{uri:'man'}} 
-      style={{width: 150, height: 200, resizeMode: 'contain',backgroundColor: "teal"}} />
+      style={{width: 150, height: 200, resizeMode: 'contain',backgroundColor: "gold"}} />
      
 
       </ScrollView> 
