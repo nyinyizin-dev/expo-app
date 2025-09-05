@@ -49,6 +49,12 @@
             "./assets/fonts/NotoSerifJP-Regular.ttf"
           ]
         }
+      ],
+      [
+        "expo-asset",
+        {
+          "assets": ["./assets/images/man.png"]
+        }
       ]
     ],
     "experiments": {
