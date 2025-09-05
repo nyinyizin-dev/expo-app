@@ -13,7 +13,9 @@ export default function Cart() {
     <View style={{ flex: 1, paddingTop: insets.top }}>
       <CustomText style={{ fontSize: 30 }}>Welcome Cart Screen</CustomText>
       <CustomText style={{ fontFamily: "NotoSerifJP" }}>おはいよいよ</CustomText>
-      <Text style={{ fontFamily: "Oswald-Bold" }}>Cart Screen</Text>
+      <CustomText style={{ fontFamily: "Oswald-Bold" }}>Cart Screen</CustomText>
+      <CustomText style={{ fontFamily: "Inter_500Medium_Italic" }}>Inter_500Medium_Italic</CustomText>
+      <CustomText style={{ fontFamily: "Inter_900Black" }}>Inter_900Black</CustomText>
     </View>
   );
 }
