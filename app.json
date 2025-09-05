@@ -38,6 +38,17 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Oswald-Bold.ttf",
+            "./assets/fonts/SpaceMono-Regular.ttf",
+            "./assets/fonts/Padauk-Regular.ttf",
+            "./assets/fonts/NotoSerifJP-Regular.ttf"
+          ]
+        }
       ]
     ],
     "experiments": {
