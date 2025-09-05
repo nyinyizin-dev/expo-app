@@ -2,6 +2,7 @@ import { View, Text, Button } from "react-native";
 import React, { useState } from "react";
 import { Link } from "expo-router";
 import * as SecureStore from "expo-secure-store";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useCounter } from "@/providers/countContext";
 
 export default function Profile() {
@@ -12,11 +13,16 @@ export default function Profile() {
     const name = await SecureStore.getItemAsync("name");
     setShow(name || "No name found");
   };
+  const getFromAsyncStore = async () => {
+    const name = await AsyncStorage.getItem("name");
+    setShow(name || "No name found");
+  };
 
   return (
     <View>
       <Text>Profile Screen</Text>
       <Text style={{ fontSize: 27, marginTop: 10 }}>Name : {show}</Text>
+      <Button title="Get data from Async store" onPress={getFromAsyncStore} />
       <Button title="Get data from secure store" onPress={getFromSecureStore} />
       <Link href="/settings/David">Go to Share Setting</Link>
       <Link href={"/detail"}>Go to Home Detail</Link>
