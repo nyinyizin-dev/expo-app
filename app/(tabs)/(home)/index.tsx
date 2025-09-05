@@ -1,25 +1,18 @@
-import { Link, useRouter } from "expo-router";
-import { StyleSheet, View, Button, Text } from "react-native";
-
+import { View, Text, TextInput } from "react-native";
+import React, { useState } from "react";
 
 export default function HomeScreen() {
-  const router = useRouter();
+  const [text, setText] = useState("");
 
   return (
-    <View style={styles.container}>
-      <Link href="/settings/David" style={{fontFamily: "SpaceMono"}}>Go to Share Setting</Link>
-      <Link href="/detail?id=normal-5">Go to Home detail</Link>
-      <Link href="/event">Go to Home Event</Link>
-      <Button title="Go to Detail" onPress={() => router.navigate({pathname: '/detail', params: {id: 'Button-7'}})} />
-     
+    <View>
+      <Text style={{ fontSize: 32, marginBottom: 10 }}>Hello {text}</Text>
+      <TextInput
+        style={{ fontSize: 32, height: 40 }}
+        placeholder="Type Here..."
+        onChangeText={(text) => setText(text)}
+        defaultValue={text}
+      />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
